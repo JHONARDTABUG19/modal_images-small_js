@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>COMPUTING THE CIRCUMFERENCE</h2>
+
+  radius mo boss:  <input type="text" id="myinput"> <br>
+  <button id="button">SUBMIT THIS</button>
+  <p id="resultpi"></p>
+
+  <script src="const.js">
+    const PI = 3.14159;
+let radius;
+let circumference;
+
+document.getElementById("button").onclick = function() {
+    radius = document.getElementById("myinput").value;
+    radius = Number(radius);
+    circumference = 2 * PI * radius;
+    document.getElementById("resultpi").textContent = circumference + "cm";
+}
+  </script>
+</body>
+</html>

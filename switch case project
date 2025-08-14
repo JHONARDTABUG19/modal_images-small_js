@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* {
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+#mybtn {
+    padding: 10px;
+    margin: 20px 20px;
+    background-color: lightgreen;
+    font-size: large;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#mybtn:hover {
+    background-color: green;
+    color: white;
+}
+</style>
+<body>
+    <h1>switch case, in grading system--using numbers</h1>
+    Your Grade: <input type="text" id="mytext"> <br>
+    <button id="mybtn">Check</button>
+    <p id="result"></p>
+
+
+    <script>
+        const mytext = document.getElementById("mytext");
+        const mybtn = document.getElementById("mybtn");
+        const result = document.getElementById("result");
+
+        
+
+    mybtn.onclick = function() {
+        const  grades = Number(mytext.value)
+
+        switch(true) {
+            case grades >= 90:
+                result.textContent = "your grade is 90 plus (A)";
+                break;
+            case grades >= 80:
+                result.textContent = "your grade is 80 plus (B+)";
+                break;
+            case grades >= 85:
+                result.textContent = "your grade is 85 plus (B)";
+                break;
+            case grades >= 70:
+                result.textContent = "your grade is 70 plus (B-)";
+                break;
+            case grades < 70:
+                result.textContent = "STUDY MORE";
+                break;
+            default:
+                result.textContent = "what you input is not applicable";
+                break;
+            
+            
+        }
+    }
+
+    </script>
+</body>
+</html>

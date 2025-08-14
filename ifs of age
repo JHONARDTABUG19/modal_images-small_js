@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>IFSs</h1>
+<h2>ENTER YOUR AGE</h2>
+<input type="text" id="mytext" placeholder="example: 18"> <br><br>
+<button id="mybtn">DONE</button>
+<p id="resultelement"></p>
+
+
+
+<body>
+    <script src="ifs.js">
+        
+const mytext = document.getElementById("mytext");
+const mybtn = document.getElementById("mybtn");
+const resultelement = document.getElementById("resultelement");
+let age;
+
+mybtn.onclick = function() {
+
+     age = Number(mytext.value);
+
+    if (age >= 100) {
+    
+    resultelement.textContent = "you are 100";
+    }
+    else if (age == 0) {
+    
+    resultelement.textContent = "zero old";
+    }
+    else if (age >= 18) {
+    
+    resultelement.textContent = "18 plus";
+    }
+    else{
+   
+    resultelement.textContent = "bruh";
+    }
+
+}
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
